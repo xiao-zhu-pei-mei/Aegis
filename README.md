@@ -10,8 +10,8 @@ graph LR
   A["Raw peptide sets"] -->|process_data.py| B["Feature matrix"]
   B -->|train.py| C["Trained models and probability scores"]
   C -->|iLearnPlus export| D["probs/"]
-  C -->|plot_ifs.py & plot_ifsUMAP.py| E["IFS and UMAP figures"]
-  D -->|plot_ROCPRC.py & plot_ifsROCPRC.py| F["ROC / PRC curves"]
+  C -->|plot_ifs.py & plot_ifsROCPRC.py & plot_ifsUMAP.py| E["IFS figures"]
+  D -->|plot_ROCPRC.py| F["ROC / PRC curves"]
 ```
 
 ---
