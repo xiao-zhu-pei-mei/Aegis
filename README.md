@@ -7,12 +7,11 @@
 
 ```mermaid
 graph LR
-A[Raw peptide sets (training/testing .fasta/.csv/.txt)] -->|process_data.py| B[Feature matrix (AA-level encodings)]
-B -->|train.py| C[Trained models & probability scores]
-C -->|iLearnPlus export| D[probs/]
-C -->|plot_ifs.py, plot_ifsUMAP.py| E[IFS & UMAP figures]
-D -->|plot_ROCPRC.py, plot_ifsROCPRC.py| F[ROC / PRC curves]
-
+  A["Raw peptide sets"] -->|process_data.py| B["Feature matrix"]
+  B -->|train.py| C["Trained models and probability scores"]
+  C -->|iLearnPlus export| D["probs/"]
+  C -->|plot_ifs.py & plot_ifsUMAP.py| E["IFS and UMAP figures"]
+  D -->|plot_ROCPRC.py & plot_ifsROCPRC.py| F["ROC / PRC curves"]
 ```
 
 ---
